@@ -18,6 +18,7 @@
   "homepage": "https://github.com/Shrawani04/consumer-app#readme",
   "dependencies": {
     "@elastic/elasticsearch": "^8.5.0",
-    "node-rdkafka": "^2.14.0"
+    "node-rdkafka": "^2.14.0",
+    "simple-node-logger": "^21.8.12"
   }
 }

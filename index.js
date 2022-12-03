@@ -5,7 +5,7 @@ const { Client } = require('@elastic/elasticsearch')
 const fs = require("fs");
 const logger = require('simple-node-logger').createSimpleLogger();
 
-const client = new  ({
+const client = new Client({
     node: env.ELASTIC_ENDPOINT,
     maxRetries: 5,
     requestTimeout: 60000
