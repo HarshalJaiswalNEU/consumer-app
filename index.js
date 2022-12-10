@@ -26,11 +26,11 @@ consumer.on('ready', () => {
     consumer.subscribe([env.KAFKA_TOPIC])
     consumer.consume();
 }).on('data', async (data) => {
-    console.log(`The message is received: ${data.value}`)
+    // console.log(`The message is received: ${data.value}`)
     let parsedData = JSON.parse(data.value);
-    console.log('parsedData ',parsedData)
+    // console.log('parsedData ',parsedData)
     let {index, search_id, ...indexData} = {...parsedData}
-    console.log("indexData ",index, search_id,indexData )
+    console.log("search Id: ", search_id," kafka topic: ", env.KAFKA_TOPIC)
 
     await client.update({
         index: parsedData.index,
